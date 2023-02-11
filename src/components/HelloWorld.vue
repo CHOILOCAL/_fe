@@ -1,11 +1,14 @@
 <template>
-  <v-container>
-    <v-row class="text-center" />
-  </v-container>
+  <div></div>
 </template>
 
-<script>
-export default {
-  name: "HelloWorld",
-};
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+
+@Component
+export default class HelloWorld extends Vue {
+  @Prop() private msg!: string;
+}
 </script>
+
+<style scoped lang="scss"></style>
